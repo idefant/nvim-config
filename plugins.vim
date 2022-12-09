@@ -1,12 +1,10 @@
 call plug#begin()
 
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'ryanoasis/vim-devicons'
 Plug 'rafi/awesome-vim-colorschemes'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

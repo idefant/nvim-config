@@ -22,8 +22,7 @@ imap <C-v> <ESC>"+pa
 
 
 " NerdTree
-nnoremap <C-t> :NERDTree<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>e :Neotree toggle .<CR>
 
 
 " Telescope
@@ -43,8 +42,8 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
 " Markdown links
-nnoremap <C-l> ciw[<C-r>"](<Esc>"*pa)<Esc>
-vnoremap <C-l> c[<C-r>"](<Esc>"*pa)<Esc>
+" nnoremap <leader>ml <cmd>ciw[<C-r>"](<Esc>"*pa)<Esc>
+" vnoremap <leader>ml <cmd>c[<C-r>"](<Esc>"*pa)<Esc>
 
 
 " Vista

@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
 		 dashboard.button( "n", "  Notes" , ":VimwikiIndex 2<CR>"),
 		 dashboard.button( "c", "  Open Nvim config" , ":call OpenNeovimConfig()<CR>"),
 		 dashboard.button( "e", "  New file" , ":ene <BAR> startinsert <CR>"),
+		 dashboard.button( "ps", "累 Sync Packer" , ":PackerSync<CR>"),
 		 dashboard.button( "q", "  Quit NVIM" , ":qa<CR>"),
 	     }
 	     local handle = io.popen('fortune')
@@ -36,5 +37,19 @@ return require('packer').startup(function(use)
 	     alpha.setup(dashboard.config)
 	 end
      }
+
+     use 'nvim-tree/nvim-web-devicons'
+
+     use {
+      "nvim-neo-tree/neo-tree.nvim",
+	branch = "v2.x",
+	requires = { 
+	  "nvim-lua/plenary.nvim",
+	  "MunifTanjim/nui.nvim",
+	}
+      }
+
+     require "smart-splits"
+     require "configs.neo-tree"
 end)
 
