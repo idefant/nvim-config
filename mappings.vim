@@ -2,14 +2,19 @@
 imap <C-space> <Esc>
 
 
+" Fix jk on long lines
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+
+
 " Alpha
 noremap <leader>af <cmd>Alpha<CR>
 
 
 " Edit config
 function! OpenNeovimConfig()
-    cd ~/AppData/Local/nvim/
-    edit ginit.vim
+  cd ~/AppData/Local/nvim/
+  edit ginit.vim
 endfunction
 nmap <leader>cc :call OpenNeovimConfig()<CR>
 

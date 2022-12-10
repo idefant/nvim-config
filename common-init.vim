@@ -1,10 +1,10 @@
 set number
 set relativenumber
 set autoindent
-set tabstop
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
-set softtabstop=4
+set expandtab
 set mouse=a
 set encoding=UTF-8
 set spell
@@ -20,7 +20,7 @@ runtime themes.vim
 lua require('plugins')
 
 if exists(':GuiFont')
-    GuiFont! FiraCode Nerd Font:h10
+  GuiFont! FiraCode Nerd Font:h10
 endif
 
 
