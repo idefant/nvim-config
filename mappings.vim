@@ -1,5 +1,12 @@
 " Escape
-imap <C-space> <Esc>
+imap <C-;> <Esc>
+imap <C-ж> <Esc>
+
+
+" Tab navigation
+nnoremap ]t <cmd>tabnext<cr>
+nnoremap [t <cmd>tabprevious<cr>
+nnoremap <leader>nt <cmd>tabnew<cr>
 
 
 " Fix jk on long lines
@@ -8,7 +15,7 @@ nnoremap <expr> k v:count ? 'k' : 'gk'
 
 
 " Alpha
-noremap <leader>af <cmd>Alpha<CR>
+noremap <leader>d <cmd>Alpha<CR>
 
 
 " Edit config
@@ -53,3 +60,13 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Vista
 nmap <C-b> :Vista<CR>
+
+
+" ToggleTerm
+nnoremap <leader>tf <cmd>ToggleTerm float<CR>
+
+
+" Commentary
+nnoremap <leader>/ <cmd>Commentary<cr>
+xmap <leader>/ <Plug>Commentary
+omap <leader>/ <Plug>Commentary

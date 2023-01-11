@@ -12,6 +12,8 @@ set spelllang=ru_ru,en_us
 set linebreak
 set termguicolors
 
+let mapleader = ' '
+
 runtime plugins.vim
 runtime mappings.vim
 runtime variables.vim

@@ -19,10 +19,15 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use "lukas-reineke/indent-blankline.nvim"
 
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
+
   require "smart-splits"
   require "configs.neo-tree"
   require "configs.gitsigns"
   require "configs.alpha"
   require "configs.indent-blankline"
+  require "configs.toggleterm"
 end)
 

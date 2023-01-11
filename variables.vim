@@ -1,7 +1,7 @@
 " VimWiki
 let g:vimwiki_list = [
   \ { 'path': '~/ABOUT_ME/wiki/', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1 },
-  \ { 'path': 'C:\Users\inik3\ABOUT_ME/vim-notes', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1 }
+  \ { 'path': '~/ABOUT_ME/notes', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1 }
 \ ]
 let g:vimwiki_auto_chdir = 1
 
