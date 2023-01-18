@@ -14,6 +14,14 @@ set termguicolors
 
 let mapleader = ' '
 
+
+" PowerShell
+let &shell = has('win32') ? 'powershell' : 'pwsh'
+let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
+let &shellredir = '-RedirectStandardOutput %s -NoNewWindow -Wait'
+let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+set shellquote= shellxquote=
+
 runtime plugins.vim
 runtime mappings.vim
 runtime variables.vim
