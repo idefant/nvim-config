@@ -8,3 +8,28 @@ require("bufferline").setup{
     separator_style = "slant",
   }
 }
+
+
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+map('n', '<leader>c', '<cmd>:bdelete<CR>', opts)
+map('n', '<leader>C', '<cmd>:bdelete!<CR>', opts)
+
+map('n', '<leader>1', '<cmd>BufferLineGoToBuffer 1<CR>', opts)
+map('n', '<leader>2', '<cmd>BufferLineGoToBuffer 2<CR>', opts)
+map('n', '<leader>3', '<cmd>BufferLineGoToBuffer 3<CR>', opts)
+map('n', '<leader>4', '<cmd>BufferLineGoToBuffer 4<CR>', opts)
+map('n', '<leader>5', '<cmd>BufferLineGoToBuffer 5<CR>', opts)
+map('n', '<leader>6', '<cmd>BufferLineGoToBuffer 6<CR>', opts)
+map('n', '<leader>7', '<cmd>BufferLineGoToBuffer 7<CR>', opts)
+map('n', '<leader>8', '<cmd>BufferLineGoToBuffer 8<CR>', opts)
+map('n', '<leader>9', '<cmd>BufferLineGoToBuffer 9<CR>', opts)
+map('n', '<leader>$', '<cmd>BufferLineGoToBuffer -1<CR>', opts)
+
+map('n', '<C-S-.>', '<cmd>BufferLineMoveNext<CR>', opts)
+map('n', '<C-S-,>', '<cmd>BufferLineMovePrev<CR>', opts)
+
+map('n', '<C-.>', '<cmd>BufferLineCycleNext<CR>', opts)
+map('n', '<C-,>', '<cmd>BufferLineCyclePrev<CR>', opts)
+

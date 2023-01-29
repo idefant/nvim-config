@@ -29,3 +29,10 @@ handle:close()
 dashboard.section.footer.val = fortune
 dashboard.config.opts.noautocmd = false
 alpha.setup(dashboard.config)
+
+
+-- Mappings
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+map('n', '<leader>d', '<cmd>Alpha<CR>', opts)

@@ -19,4 +19,10 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+
+-- Mappings
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+map('n', '<leader>g', '<cmd>lua _lazygit_toggle()<CR>', opts)
+map('n', '<leader>tf', '<cmd>ToggleTerm float<CR>', opts)
