@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use "lukas-reineke/indent-blankline.nvim"
   use {"akinsho/toggleterm.nvim", tag = '*'}
+  use 'nvim-lualine/lualine.nvim'
 
   require "smart-splits"
   require "configs.nvim-tree"
@@ -19,5 +20,6 @@ return require('packer').startup(function(use)
   require "configs.toggleterm"
   require "configs.mini-move"
   require "configs.bufferline"
+  require "configs.lualine"
 end)
 

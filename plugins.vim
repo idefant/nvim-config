@@ -1,6 +1,5 @@
 call plug#begin()
 
-Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'tpope/vim-surround'
