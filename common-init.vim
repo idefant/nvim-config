@@ -22,6 +22,7 @@ let &shellredir = '-RedirectStandardOutput %s -NoNewWindow -Wait'
 let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
 set shellquote= shellxquote=
 
+
 runtime plugins.vim
 runtime mappings.vim
 runtime variables.vim
@@ -29,9 +30,17 @@ runtime themes.vim
 
 lua require('plugins')
 
+
 if exists(':GuiFont')
   GuiFont! FiraCode Nerd Font:h10
 endif
+
+
+function! Dos2Unix()
+  :%s/\r//ge
+  :set ff=unix
+  :w
+endfunction
 
 
 " VimWiki requires these

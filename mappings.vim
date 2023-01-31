@@ -3,6 +3,10 @@ imap <C-;> <Esc>
 imap <C-ж> <Esc>
 
 
+" dos2unix
+nnoremap <C-S-r> :call Dos2Unix()<CR>
+
+
 " Fix jk on long lines
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
@@ -35,7 +39,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 " Vista
-nmap <C-b> :Vista<CR>
+nmap <leader>v <cmd>Vista!!<CR>
 
 
 " Commentary

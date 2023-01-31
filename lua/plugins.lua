@@ -11,8 +11,9 @@ return require('packer').startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use {"akinsho/toggleterm.nvim", tag = '*'}
   use 'nvim-lualine/lualine.nvim'
+  use 'famiu/bufdelete.nvim'
 
-  require "smart-splits"
+  require "mappings"
   require "configs.nvim-tree"
   require "configs.gitsigns"
   require "configs.alpha"

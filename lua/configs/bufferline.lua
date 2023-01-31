@@ -1,3 +1,13 @@
+local close_func = function(bufnum)
+  local bufdelete_avail, bufdelete = pcall(require, "bufdelete")
+  if bufdelete_avail then
+    bufdelete.bufdelete(bufnum, true)
+  else
+    vim.cmd.bdelete { args = { bufnum }, bang = true }
+  end
+end
+
+
 require("bufferline").setup{
   options = {
     offsets = {
@@ -6,6 +16,8 @@ require("bufferline").setup{
       { filetype = "vista_markdown", text = "TOC", padding = 1 },
     },
     separator_style = "slant",
+    close_command = close_func,
+    right_mouse_command = close_func,
   }
 }
 
@@ -13,8 +25,8 @@ require("bufferline").setup{
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map('n', '<leader>c', '<cmd>:bdelete<CR>', opts)
-map('n', '<leader>C', '<cmd>:bdelete!<CR>', opts)
+map('n', '<leader>c', '<cmd>:Bdelete<CR>', opts)
+map('n', '<leader>C', '<cmd>:Bdelete!<CR>', opts)
 
 map('n', '<leader>1', '<cmd>BufferLineGoToBuffer 1<CR>', opts)
 map('n', '<leader>2', '<cmd>BufferLineGoToBuffer 2<CR>', opts)
