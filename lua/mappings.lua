@@ -26,3 +26,8 @@ map('n', '<leader>fn', '<cmd>enew<cr>', opts)
 map('n', '<leader>s', '<cmd>w<cr>', opts)
 map('n', '<leader>q', '<cmd>q<cr>', opts)
 map('n', '<C-S-q>', '<cmd>qa<cr>', opts)
+
+
+-- Keyboard layout switching
+map('i', '<A-m>', '<C-^>', opts)
+

@@ -6,13 +6,12 @@ let g:vimwiki_list = [
 let g:vimwiki_auto_chdir = 1
 
 
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+
+
 " Theme
 let g:gruvbox_contrast_dark = 'hard'
-
-
-" Плагин для переключения раскладке при переключении в нормальный режим
-let g:XkbSwitchEnabled = 1
-let g:XkbSwitchLib = 'C:\Program Files\Neovim\bin\libxkbswitch64.dll'
 
 
 " Vista

@@ -23,6 +23,12 @@ let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
 set shellquote= shellxquote=
 
 
+" Keyboard layout switching
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+
+
 runtime plugins.vim
 runtime mappings.vim
 runtime variables.vim
@@ -38,7 +44,7 @@ endif
 
 function! Dos2Unix()
   :%s/\r//ge
-  :set ff=unix
+  :set ff=dos
   :w
 endfunction
 

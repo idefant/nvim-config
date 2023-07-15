@@ -15,7 +15,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 " Plug 'lvht/tagbar-markdown'
 Plug 'liuchengxu/vista.vim'
 
-Plug 'lyokha/vim-xkbswitch'
+" Plug 'lyokha/vim-xkbswitch'
 
 " Plug 'tpope/vim-markdown'
 Plug 'plasticboy/vim-markdown'

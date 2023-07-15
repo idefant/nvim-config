@@ -3,6 +3,10 @@ imap <C-;> <Esc>
 imap <C-ж> <Esc>
 
 
+" Fix bug with freeze app
+nnoremap <S-k> <nop>
+
+
 " dos2unix
 nnoremap <C-S-r> :call Dos2Unix()<CR>
 

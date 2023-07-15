@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*'}
   use 'nvim-lualine/lualine.nvim'
   use 'famiu/bufdelete.nvim'
+  use 'rcarriga/nvim-notify'
 
   require "mappings"
   require "configs.nvim-tree"
@@ -22,5 +23,6 @@ return require('packer').startup(function(use)
   require "configs.mini-move"
   require "configs.bufferline"
   require "configs.lualine"
+  require "configs.vimwiki"
 end)
 
